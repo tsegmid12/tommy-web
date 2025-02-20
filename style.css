@@ -1,3 +1,14 @@
+header{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    background-color: rgb(2, 2, 44);
+    color: white;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -23,43 +34,48 @@ li, a, button{
     width: 100%;
     height: 70px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 0 10%;
-    background-color: none;
+    background-color: white;
+    margin-top: 30px;
     transition: all 0.3s ease;
 }
-
-nav:hover{
-    background-color: white;
-}
-
-nav:hover .nav-link li a{
-    color: navy;
-}
-
-
-
 .tommy-button {
-    position: fixed;
-    left: 1%;
-    margin-left: auto;
+    position: relative;
+    left: 10px;
     padding: 9px 25px;
     cursor: pointer;
     border: none;
     background: none;
+    
+}
+
+.tommy-button img{
+    width: 15px;
 }
 
 .tommy-button a{
+    color: rgb(3, 3, 60);
     font-size: 14px;
-    letter-spacing: .3rem;
+    letter-spacing: .3rem;  
     transition: 0.3s ease;
+    font-weight: bold;
 
 }
 
+.tommy-button a::after{
+    content: '';
+    display: block;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: navy;
+    transition: all .5s;
+}
 
-nav:hover .tommy-button a{
-    color:navy;
+.tommy-button a:hover::after{
+    width: 100%;
 }
 
 .nav-link{
@@ -67,37 +83,48 @@ nav:hover .tommy-button a{
     list-style: none;
     cursor: pointer;
     display: flex;
+    position: relative;
 }
 
-.nav-link li{
+.nav-link a{
     border: none;
     background: none;
     display: inline-block;
-    padding: 0 10px;
-}
-
-.nav-link li a{
+    padding: 0 7px;
     transition: all 0.3s ease;
 }
 
-.tommy-button img{
-    width: 15px;
+.nav-link a{
+    color: rgb(2, 2, 60);
+    letter-spacing: .05x    rem;
+}
+
+.nav-link a::after{
+    content: '';
+    display: block;
+    bottom: -2px;
+    left: 0;
+    width: 0%;
+    height: 1.5px;
+    background-color: navy;
+    transition: all .5s;
+}
+
+.nav-link a:hover::after{
+    width: 100%;
 }
 
 .icons {
-    position: fixed;
-    right: 2%;
+    margin-left: 50px;
+    margin-right: 40px;
     color: white;
 }
 
 .icons i{
     padding: 10px;
     transition: 0.3s ease;
+    color: rgb(2, 2, 44);
 
-}
-
-nav:hover .icons{
-    color: navy;
 }
 
 .backgrnd {
